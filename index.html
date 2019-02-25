@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eugene Lazarev: Design UI/UX</title>
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lato:400,700" rel="stylesheet" type="text/css">
+
+  
+  <meta property="og:title" content="Eugene Lazarev, future frontend developer" />
+    <meta property="og:description" content="Love design as much as programming." />
+    <meta charset='utf-8'/>
+  
+  <link rel="icon" type="image/png" href="" sizes="32x32">
+  <link rel="icon" type="image/png" href="" sizes="16x16">
+  
+  <style>
+  
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: Larsseit;
+  src: url("Larsseit.woff2") format("woff2"), url("Larsseit.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Larsseit Bold;
+  src: url("Larsseit-Bold.woff2") format("woff2"), url("Larsseit-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Lato', sans-serif; 
+  line-height: 1.6;
+  font-size: 30px;
+  padding: 70px 113px;
+  cursor: url('/img/normal.ico'), default;
+  transition: 0s;
+}
+p {
+  padding-bottom: 26px;
+}
+p:last-child {
+  padding-bottom: 0px;
+}
+b {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;  
+}
+a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+  cursor: url('/img/red.ico'), default;
+}
+a:hover {
+  color: #CCCCCC;
+  border: none;
+}
+a:hover i {
+  color: black;
+}
+.crimson {
+  font-family: 'Crimson Text', serif;
+  font-size: 115%;
+  padding-bottom: 30px;
+}
+i {
+  font-family: 'Crimson Text', serif;
+  font-style: oblique;
+  font-size: 115%;
+}
+li {
+  padding-bottom: 10px;
+}
+.header-small {
+  font-size: 90%;
+  margin-top: 10px;
+}
+.contact {
+  margin-top: 20px;
+}
+.quote {
+  font-size: 70%;
+  padding-bottom: 30px;
+}
+.gray {
+  color: #c7c7c7;
+  font-style: normal;
+}
+.quicklinks {
+  padding-bottom: 30px;
+  font-family: 'Crimson Text', serif;
+}
+.quicklinks li {
+  padding-bottom: 7px;
+}
+.quicklinks a {
+  font-family: 'Lato', sans-serif; 
+}
+sup {
+  font-size: 55%;
+  vertical-align: super;
+  color: #c7c7c7;
+  margin-left: 5px;
+}
+
+.change-bg {
+  color: #FF0000;
+}
+.screenshot {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-top: 25px;
+}
+.wrap {
+  max-width: 750px;
+  margin: 0 auto;
+}
+.noborder {
+	border-bottom: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  body {
+    font-size: 26px;
+    padding: 30px 35px;
+  }
+  p {
+    padding-bottom: 20px;
+  }
+  li {
+    padding-bottom: 30px;
+  }
+  .projects, .blog {
+    margin-top: 10px;
+  }
+  .screenshot {
+    margin-bottom: 15px;
+    margin-top: 0px;
+  }
+}
+mark {
+    background: #000000;
+    padding: 3px 8px;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.cv {
+  font-size: 60%;
+  margin-top: 10px;
+  color: #c7c7c7;
+}
+.hole {
+  font-size: 200%;
+  margin-top: 10px;
+  color: #ffffff;
+}
+.container {  
+  width: 100%;
+}
+.box {
+    display: inline-block; 
+    font-size: 14px;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 4px;
+    padding: 5px 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.button {
+background-color: #FDCB0E;
+padding: 10px 20px;
+border-radius: 4px;
+}
+.button:hover {
+  background-color: #fedb43;
+  color: black;
+  cursor: pointer;
+}
+.hire-me {
+margin-bottom: 50px;
+}
+
+  </style>
+</head>
+<body cz-shortcut-listen="true">
+<div class="wrap">
+    <img src="logo.gif" alt="Logo" style="width:170px;height:49px;">
+  <p>
+    <b>Eugene Lazarev</b>. Designer. Entrepreneur
+    <br>
+    <span class="gray">Me</span><sup>1</sup>&nbsp;
+    <a href="">Portfolio</a><sup>2</sup>&nbsp;
+    <a href="">Medium</a><sup>3</sup>&nbsp;
+    <a href="mailto:ledocoding@gmail.com" target="_blank">Say Hello</a><sup>4</sup>
+  </p>
+
+<ul class="quicklinks">
+  <li>— Design portfolio on <a href="https://dribbble.com/ledocoding" target="_blank"><b>Dribbble</b></a> / <a href="https://www.behance.net/motogeka44ac" target="_blank"><b>Behance</b></a></li>
+  <li>— My github repo on <a href="https://github.com/ledocod" target="_blank"><b>GitHub</b></a></li>
+  <li>— My JavaScript kata on <a href="https://www.codewars.com/kata/5ad0d8356165e63c140014d4/train" target="_blank"><b>Codewars</b></a></li>
+  <li>— <a href="mailto:ledocoding@gmail.com"><b>Business inquiries</b></a></li>
+  <li>— <a href="" target="_blank"><b>Facebook</b></a>, <a href="" target="_blank"><b>Instagram</b></a>, <a href="" target="_blank"><b>LinkedIn</b></a></li>
+</ul>
+<div class="hire-me">
+  <a href="mailto:ledocoding@gmail.com">
+    <b class="button">Hire Me 👨🏻‍💻</b>
+  </a>
+</div>
+<p class="quote"><i>“Design should impress. Design should please. Design should rock. But most importantly, design should solve complex problems. Outcome increase sales.” </i><span class="gray">↓</span></p>
+<p>My name is Eugene. I'm UX/UI <mark>Designer</mark>. I have a high level of competence in building different digital products. I help businesses to innovate and design inclusive product experiences for diverse users, to grow, creating products that meet both user and business needs.</p>
+
+<p>I learnt to be persistent and <mark>solve problems</mark> in creative ways, responsible for understanding and meeting the needs of the user, to make specific design decisions to enhance a user-experience journey and promote intuitive interaction.
+</p>
+<p>When starting a project, I always take my time to plan, research and experiment, before kicking off with the final design work. My aim is <i>to create such a strong impression</i> on the end user that they have to act after seeing the design piece.
+</p>
+
+<div class="container">
+  <div class="box"><b>Research 🔍</b></div>
+  <div class="box"><b>UI Desegn 💎</b></div>
+  <div class="box"><b>UX Design 🎯</b></div>
+  <div class="box"><b>Quality 🥇</b></div>
+  <div class="box"><b>Client service ☕️</b></div>
+</div>
+<p class="contact"><i>Feel free to contact me</i> → <a href="mailto:ledocoding@gmail.com">here</a>
+
+ <p class="header-small">
+    <b>Eugene Lazarev</b>. 
+    <br>
+    <span class="gray">Me</span><sup>1</sup>&nbsp;
+    <a href="">Portfolio</a><sup>2</sup>&nbsp;
+    <a href="">Medium</a><sup>3</sup>&nbsp;
+    <a href="mailto:ledocoding@gmail.com" target="_blank">Say Hello</a><sup>4</sup>
+  </p>
+
+  <p class="cv"> You can download my CV → <a href="mycv.pdf" download>here</a></p>
+  <span class="change-bg" onmouseover="body.style.transition=&#39;all 0s&#39;; body.style.background=&#39;#000000&#39;; this.style.color=&#39;#CCCCCC&#39;" onmouseout="body.style.transition=&#39;all 8s&#39;; body.style.background=&#39;#FFFFFF&#39;">🥠</span> <span class="hole">Oh! You are curious one!</span>
+</div>
+
+
+</body></html>
