@@ -1,466 +1,150 @@
 <!DOCTYPE html>
-
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evgheni Lazarev: UI/UX Design</title>
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lato|EB+Garamond|Montserrat:400,700,900" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="">
   <script src="https://unpkg.com/scrollreveal"></script>
-
-  <meta property="og:title" content="Eugene Lazarev, future frontend developer" />
-    <meta property="og:description" content="Love design as much as programming." />
-    <meta charset='utf-8'/>
-  
-  <link rel="icon" type="image/png" href="" sizes="32x32">
-  <link rel="icon" type="image/png" href="" sizes="16x16">
-  
   <style>
-  
-  @import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
-}
-  
-
-html, body {
-  font-family: 'Inter var', sans-serif; 
-  height: 100%;
-  padding: 0px;
-  margin: 0px;
-  background-color: #171717;
-
-}
-
-.header {
-  color: #EDEEF0;
-  font-size: 20px;
-  display: flex;
-  justify-content: flex-start;
-  margin: 20px 0 20px 0;
-}
-
-
-.marquee__content {
- display: none; 
-}
-
-.symbols {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-  flex-wrap: wrap;
-  height: auto;
-  flex: 1;
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 1.6;
-  max-width: 720px;
-  vertical-align: baseline;
-}
-
-.main > div:nth-child(2) {
-  margin-top: 20px;
-}
-
-.current {
-  color: #EDEEF0;
-  font-style: normal;
-  flex-direction: row;
-  margin-top: 20px;
-}
-
-p {
-  line-height: 1.6;
-  font-size: 20px;
-  font-weight: 400;
-  color: #7C7C7C;
-  margin: 12px 0px;
-}
-
-a {
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
-  transition-delay: initial;
-  transition-property: color;
-  text-decoration: none;
-  color: #7C7C7C;
-  cursor: pointer;
-}
-
-a:hover {
-  color: #fff;
-  border: none;
-}
-
-.asup {
-  color: #fff;
-  font-weight: 600;
-  border: none;  
-  cursor: pointer;
-}
-
-sup {
-  font-size: 55%;
-  vertical-align: super;
-  color: #7C7C7C;
-  margin-left: 5px;
-}
-
-/*.container {  
-  width: 100%;
-  display: flex;
-  
-}
-.box {
-  flex: 1;
-    display: inline-block; 
-    font-size: 14px;
-    height: 40px;
-    width: 150px;
-  line-height: 40px;
-    text-align: center;
-    color: #000;
-    background: #fff4c3;
-    border-radius: 2px;
-    font-weight: bold;
-    margin-right: 5px;
-    margin-bottom: 10px;
-}*/
-
-.article {
-  display: grid;
-  padding: 25px;
-  grid-template-columns: 80px 1fr 80px;
-  max-width: 760px; /* Adjust this value as needed */
-  margin: 0 auto; /* Centers the element horizontally */
-  opacity: 0;
-  animation: fade-in-bottom ease 1s forwards;
-  animation-delay: 0.3s;
-}
-
-.article > * {
-  grid-column: 2;
-  min-width: 0;
-}
-
-.about {
-  font-family: Inter;
-  margin: 8px 0 0 0;
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: -3%;
-  color: #EDEEF0;
-}
-
-.role {
-  font-family: Inter;
-  margin: 0 0 12px 0;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1.6;
-  letter-spacing: -3%;
-  color: #a2a2a2;
-}
-
-
-.cta {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 48px 0 100px 0;
-}
-
-.inline-link {
-  color: #EDEEF0;
-}
-
-.inline-link:hover {
-  color: #f47521;
-}
-
-.button {
-  flex-basis: auto;
-  font-family: Inter;
-  font-size: 15px;
-  line-height: 1.6;
-  white-space: nowrap;
-  color: white;
-  display: inline-flex;
-  padding: 10px 24px;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  border-radius: 6px;
-  background: var(--Dark-Buttons-button-neutral, linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%), #27282D);
-
-  /* Dark/Buttons/neutral */
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.40), 0px 2px 2px 0px rgba(0, 0, 0, 0.40), 0px 0px 0px 2px rgba(255, 255, 255, 0.12), 0px -2px 0px 0px rgba(255, 255, 255, 0.04), 0px 2px 0px 0px rgba(255, 255, 255, 0.04);
-  cursor: pointer;
-}
-
-.button:hover {
-  border-radius: 6px;
-  background: var(--Dark-Buttons-button-neutral-hover, linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%), #35373C);
-/* Dark/Buttons/neutral */
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.40), 0px 2px 2px 0px rgba(0, 0, 0, 0.40), 0px 0px 0px 2px rgba(255, 255, 255, 0.12), 0px -2px 0px 0px rgba(255, 255, 255, 0.04), 0px 2px 0px 0px rgba(255, 255, 255, 0.04);
-}
-
-.article > .frm {
-  grid-column: 1 / -1;
-}
-
-
-img {
-  width: 50%;
-  opacity: 0;
-  border-radius: 14px;
-  animation: fade-in-up ease 0.6s forwards;
-  animation-delay: 0.8s;
-}
-
-.menu {
-  font-family: Inter;
-  font-size: 20px;
-  opacity: 0;
-  animation: fade-in-right ease 0.6s forwards;
-  animation-delay: 0.8s;
-  margin-bottom: 10px;
-}
-
-
-.fromBottomIn
-{
-	transition: transform 1.0s ease, opacity 1.0s ease;
-	
-	transform: translate(0,0);
-	opacity: 1.0;
-}
-
-.fromBottomOut
-{
-	transition: transform 1.0s ease, opacity 1.0s ease;
-	
-	transform: translate(0,10px);
-	opacity: 0.0;
-}
-
-.cssanimation, .cssanimation span {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-.cssanimation span { display: inline-block }
-
-.leFadeInBottom span { animation-name: leFadeInBottom }
-@keyframes leFadeInBottom {
-    from {
-        opacity: 0;
-        transform: translateY(100%);
+    html, body {
+      font-family: 'Inter var', sans-serif;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      background-color: #171717;
     }
-    to { opacity: 1 }
-}
-
-.fadeInBottom { animation-name: fadeInBottom }
-@keyframes fadeInBottom {
-    from {
-        opacity: 0;
-        transform: translateY(100%);
+    .container {
+      display: grid;
+      padding: 25px;
+      max-width: 760px;
+      margin: 0 auto;
+      grid-template-columns: 80px 1fr 80px;
     }
-    to { opacity: 1 }
-}
-
-@keyframes fade-in-bottom {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@media screen and (min-width: 500px) {
-.frm {
-    display: none;
-} 
-}
-
-@media screen and (max-width: 500px) {
-.article {
-    grid-template-columns: 5px 1fr 5px;
-} 
-.title {
-  font-size: 20px;
-}
-
-img {
-    width: 100%;
-  }
-
-}
-
-@media screen and (max-width: 380px) {
-  .title {
-  font-size: 20px;
-  line-height: 1.6;
-}
-
-  img {
-    width: 100%;
-  }
-
-.main {
-    font-size: 20px;
-} 
-.main > p {
-    font-size: 20px;
-} 
-
-.button {
-  font-size: 14px;
-}
-
-}
-</style>
+    .container > * {
+      grid-column: 2;
+      opacity: 0;
+      filter: blur(10px);
+      transition: opacity 0.6s ease-out, filter 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .container > .visible {
+      opacity: 1;
+      filter: blur(0);
+    }
+    img {
+      width: 50%;
+      border-radius: 14px;
+    }
+    .header {
+      color: #EDEEF0;
+      font-size: 20px;
+      display: flex;
+      justify-content: flex-start;
+      margin: 20px 0;
+    }
+    .menu {
+      margin-bottom: 10px;
+      transform: translateX(-20px);
+    }
+    .about, .role, .p1, .p2, .p3, .cta {
+      transform: translateY(20px);
+    }
+    .about {
+      font-family: Inter;
+      margin: 8px 0 0;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 1.6;
+      letter-spacing: -3%;
+      color: #EDEEF0;
+    }
+    .role {
+      font-family: Inter;
+      margin: 0 0 12px;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.6;
+      letter-spacing: -3%;
+      color: #a2a2a2;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 20px;
+      font-weight: 400;
+      color: #7C7C7C;
+      margin: 12px 0;
+    }
+    a {
+      transition: color 200ms ease-in-out;
+      text-decoration: none;
+      color: #7C7C7C;
+      cursor: pointer;
+    }
+    a:hover {
+      color: #fff;
+    }
+    .cta {
+      margin: 48px 0 100px;
+    }
+    .button {
+      padding: 10px 24px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%), #27282D;
+      border-radius: 6px;
+      box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.40), 0px 2px 2px rgba(0, 0, 0, 0.40);
+      cursor: pointer;
+      color: white;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+    .button:hover {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%), #35373C;
+    }
+    @media screen and (max-width: 500px) {
+      .container {
+        grid-template-columns: 5px 1fr 5px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="article">
-  <div class="header">
-    <div><img src="/ledocod.github.io/Photo 0108_Original.jpg"></img></div>
+  <div class="container">
+    <div class="header">
+      <img src="/ledocod.github.io/Photo 0108_Original.jpg" alt="Profile Image">
     </div>
-<div class="main">
- <div class="menu">
- <div class="current">About me</span><sup>1</sup>&nbsp;
-  <a href="https://www.linkedin.com/in/eugene-lazarev-2216a6252" target="_ablank">LinkedIn</a><sup>2</sup>&nbsp;
-    <a href="https://medium.com/@eulazarev" target="_ablank">Medium</a><sup>3</sup>&nbsp;
-    <a href="" target="_ablank">X</a><sup>4</sup>&nbsp;
-    <a href="mailto:evgh.lazarev@gmail.com">Say Hello</a><sup>5</sup>
+    <div class="menu">About me<sup>1</sup>&nbsp;
+      <a href="https://www.linkedin.com/in/eugene-lazarev-2216a6252" target="_blank">LinkedIn</a><sup>2</sup>&nbsp;
+      <a href="https://medium.com/@eulazarev" target="_blank">Medium</a><sup>3</sup>&nbsp;
+      <a href="" target="_blank">X</a><sup>4</sup>&nbsp;
+      <a href="mailto:evgh.lazarev@gmail.com">Say Hello</a><sup>5</sup>
+    </div>
+    <div class="about">Eugene Lazarev</div>
+    <div class="role">Senior Product Designer</div>
+    <p class="p1">With 8 years in the industry, my journey has been a thrilling exploration of design, innovation, and problem-solving. In recent years I contributed to Crunchyroll <a href="https://apps.apple.com/in/app/crunchyroll/id329913454" class="inline-link" target="_blank">iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.crunchyroll.crunchyroid&pcampaignid=web_share" class="inline-link" target="_blank">Android</a> apps. <a href="https://www.crunchyroll.com/" class="inline-link" target="_blank">Crunchyroll</a><sup>Sony Pictures</sup> is an online streaming service with millions of users that specializes in providing a wide range of anime content.</p>
+    <p class="p2">Design, for me, is not just about aesthetics, it's about understanding the user's needs and crafting solutions that seamlessly integrate into their lives. Throughout my career, I've been dedicated to the idea that great design should be both functional and delightful.</p>
+    <p class="p3"></p>
+    <div class="cta">
+      <a href="mailto:evgh.lazarev@gmail.com" class="button">Drop me a line</a>
+    </div>
   </div>
-  </div>
-  <div>
-  <div class="about">Eugene Lazarev</div>
-  <div class="role">Senior Product Designer</div>
-  </div>
-<p class="p1">  With 8 years in the industry, my journey has been a thrilling exploration of design, innovation, and problem-solving. In recent years I contributed to Crunchyroll <a href="https://apps.apple.com/in/app/crunchyroll/id329913454" class="inline-link" target="_ablank">iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.crunchyroll.crunchyroid&pcampaignid=web_share" class="inline-link" target="_ablank">Android</a> apps. <a href="https://www.crunchyroll.com/" class="inline-link" target="_ablank">Crunchyroll</a><sup>Sony Pictures</sup> is an online streaming service with millions of users that specializes in providing a wide range of anime content.</p>
-<p class="p2">Design, for me, is not just about aesthetics, it's about understanding the user's needs and crafting solutions that seamlessly integrate into their lives. Throughout my career, I've been dedicated to the idea that great design should be both functional and delightful.</p>
-<p class="p3"></p>
-<div class="cta">
-  <a href="mailto:evgh.lazarev@gmail.com" class="button">Drop me a line</a>
-  </div>
-</div>
-</div>
-<script>
-window.sr = ScrollReveal()
-sr.reveal('.p1, .p2, .p3, .pref' , { origin : 'bottom', duration: 800, distance: '15px', easing   : 'ease-in-out', reset: false }, 100)
-</script>
-
-<script src="/ledocod.github.io/ScrollTrigger.min.js"></script>
-<script>
-window.counter = function() {
-	// this refers to the html element with the data-scroll-showCallback tag
-	var span = this.querySelector('span');
-	var current = parseInt(span.textContent);
-
-	span.textContent = current + 1;
-};
-
-document.addEventListener('DOMContentLoaded', function(){
-  var trigger = new ScrollTrigger({
-	  addHeight: true
-  });
-});
-</script>
-<script>
-  window.onload = function() {
-    animateSequence();
-    animateRandom();
-};
-
-function animateSequence() {
-    var a = document.getElementsByClassName('sequence');
-    for (var i = 0; i < a.length; i++) {
-        var $this = a[i];
-        var letter = $this.innerHTML;
-        letter = letter.trim();
-        var str = '';
-        var delay = 10;
-        for (l = 0; l < letter.length; l++) {
-            if (letter[l] != ' ') {
-                str += '<span style="animation-delay:' + delay + 'ms; -moz-animation-delay:' + delay + 'ms; -webkit-animation-delay:' + delay + 'ms; ">' + letter[l] + '</span>';
-                delay += 15;
-            } else
-                str += letter[l];
-        }
-        $this.innerHTML = str;
-    }
-}
-
-function animateRandom() {
-    var a = document.getElementsByClassName('random');
-    for (var i = 0; i < a.length; i++) {
-        var $this = a[i];
-        var letter = $this.innerHTML;
-        letter = letter.trim();
-        var delay = 70;
-        var delayArray = new Array;
-        var randLetter = new Array;
-        for (j = 0; j < letter.length; j++) {
-            while (1) {
-                var random = getRandomInt(0, (letter.length - 1));
-                if (delayArray.indexOf(random) == -1)
-                    break;
-            }
-            delayArray[j] = random;
-        }
-        for (l = 0; l < delayArray.length; l++) {
-            var str = '';
-            var index = delayArray[l];
-            if (letter[index] != ' ') {
-                str = '<span style="animation-delay:' + delay + 'ms; -moz-animation-delay:' + delay + 'ms; -webkit-animation-delay:' + delay + 'ms; ">' + letter[index] + '</span>';
-                randLetter[index] = str;
-            } else
-                randLetter[index] = letter[index];
-            delay += 80;
-        }
-        randLetter = randLetter.join("");
-        $this.innerHTML = randLetter;
-    }
-}
-
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-</script>
-</body></html>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const elements = document.querySelectorAll('.container > *');
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add('visible');
+          if (el.classList.contains('menu')) {
+            el.style.transform = 'translateX(0)';
+          } else {
+            el.style.transform = 'translateY(0)';
+          }
+        }, index * 300);
+      });
+    });
+  </script>
+</body>
+</html>
