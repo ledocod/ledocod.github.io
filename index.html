@@ -36,8 +36,8 @@
       filter: blur(0); /* Remove blur effect */
     }
     img {
-      max-width: 50%;
-      width: 100%; /* Ensure image takes full width */
+      max-width: 50%; /* Take up 50% of container width */
+      width: 100%; /* Ensure image takes full width of its container */
       border-radius: 14px;
     }
     .header {
@@ -48,11 +48,13 @@
     .menu {
       display: flex;
       align-items: center;
-      gap: 16px; /* Gap between items */
+      gap: 8px; /* Gap between items */
       color: #fff;
       margin-top: 32px;
       margin-bottom: 12px;
-      transform: translateX(-20px);
+    }
+    .menu > * {
+      margin-right: 8px; /* Adjust margin between items */
     }
     .menu a {
       transition: color 200ms ease-in-out;
@@ -63,9 +65,9 @@
     .menu a:hover {
       color: #fff;
     }
-    .about, .p1, .p2, .p3, .cta {
+    .about {
       margin-top: 20px;
-      width: 100%;
+      width: auto; /* Allow width to be determined by content */
     }
     .name {
       font-size: 32px;
