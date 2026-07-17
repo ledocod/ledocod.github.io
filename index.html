@@ -1,166 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evgheni Lazarev: Senior Product Designer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <style>
-    html, body {
-      font-family: 'Inter var', sans-serif;
-      height: 100%;
-      padding: 0;
-      margin: 0;
-      background-color: #171717;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; /* Align items to the left */
-      max-width: 600px; /* Set max width for the content */
-      margin: 0 auto; /* Center align content */
-      padding: 25px;
-      box-sizing: border-box; /* Include padding in max-width calculation */
-    }
-    .container > * {
-      opacity: 0;
-      transform: translateY(20px);
-      filter: blur(10px); /* Apply blur effect */
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out, filter 0.6s ease-out;
-      width: 100%; /* Ensure elements take full width */
-    }
-    .container > .visible {
-      opacity: 1;
-      transform: translateY(0);
-      filter: blur(0); /* Remove blur effect */
-    }
-    img {
-      max-width: 50%; /* Take up 50% of container width */
-      width: 100%; /* Ensure image takes full width of its container */
-      border-radius: 14px;
-    }
-    .header {
-      color: #EDEEF0;
-      font-size: 20px;
-      margin: 20px 0;
-    }
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 8px; /* Gap between items */
-      color: #fff;
-      margin-top: 32px;
-      margin-bottom: 12px;
-    }
-    .menu > * {
-      margin-right: 8px; /* Adjust margin between items */
-    }
-    .menu a {
-      transition: color 200ms ease-in-out;
-      text-decoration: none;
-      color: #7C7C7C;
-      cursor: pointer;
-    }
-    .menu a:hover {
-      color: #fff;
-    }
-    .about {
-      margin-top: 20px;
-      margin-bottom: 20px;;
-      width: auto; /* Allow width to be determined by content */
-    }
-    .name {
-      font-size: 50px;
-      font-weight: 500;
-      line-height: 1.6;
-      letter-spacing: -3.5%;
-      color: #EDEEF0;
-    }
-    .role {
-      font-size: 24px;
-      font-weight: 300;
-      line-height: 1.6;
-      letter-spacing: -3%;
-      color: #a2a2a2;
-    }
-    p {
-      line-height: 1.6;
-      font-size: 20px;
-      font-weight: 400;
-      color: #7C7C7C;
-      margin: 12px 0;
-    }
-    a {
-      transition: color 200ms ease-in-out;
-      text-decoration: none;
-      color: #ffffff;
-      cursor: pointer;
-    }
-    a:hover {
-      color: #F47521;
-    }
-    .cta {
-      margin: 16px 0 64px;
-    }
-    .button {
-      padding: 10px 24px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%), #27282D;
-      border-radius: 6px;
-      box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.40), 0px 2px 2px rgba(0, 0, 0, 0.40);
-      cursor: pointer;
-      color: white;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-    }
-    .button:hover {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%), #35373C;
-      color: white;
-    }
-    @media screen and (max-width: 500px) {
-      .container {
-        padding: 10px;
-      }
-      img {
-        max-width: 100%;
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Eugene Lazarev is a Senior Product Designer shaping clear, accessible digital products and services.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Eugene Lazarev — Senior Product Designer">
+  <meta property="og:description" content="Portfolio and experience of Senior Product Designer Eugene Lazarev.">
+  <meta property="og:url" content="https://elazarev.me/">
+  <meta property="og:image" content="https://elazarev.me/DMN_8247.jpg">
+  <link rel="canonical" href="https://elazarev.me/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Eugene Lazarev — Senior Product Designer</title>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <img src="/ledocod.github.io/DMN_8247.jpg" alt="Profile Image">
-    </div>
-    <div class="menu">
-      <div>About me</div>
-      <a href="https://www.linkedin.com/in/eugene-lazarev-2216a6252" target="_blank">LinkedIn</a>
-      <a href="https://medium.com/@eulazarev" target="_blank">Medium</a>
-      <a href="" target="_blank">X</a>
-      <a href="mailto:evgh.lazarev@gmail.com">Say Hello</a>
-    </div>
-    <div class="about">
-      <div class="name">Eugene Lazarev</div>
-      <div class="role">Senior Product Designer</div>
-    </div>
-    <p class="p1">With 8 years in the industry, my journey has been a thrilling exploration of design, innovation, and problem-solving. In recent years I contributed to Crunchyroll <a href="https://apps.apple.com/in/app/crunchyroll/id329913454" class="inline-link" target="_blank">iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.crunchyroll.crunchyroid&pcampaignid=web_share" class="inline-link" target="_blank">Android</a> apps. <a href="https://www.crunchyroll.com/" class="inline-link" target="_blank">Crunchyroll</a><sup> sony pictures</sup> is an online streaming service with millions of users that specializes in providing a wide range of anime content.</p>
-    <p class="p2">Design, for me, is not just about aesthetics, it's about understanding the user's needs and crafting solutions that seamlessly integrate into their lives. Throughout my career, I've been dedicated to the idea that great design should be both functional and delightful.</p>
-    <p class="p3"></p>
-    <div class="cta">
-      <a href="mailto:evgh.lazarev@gmail.com" class="button">Drop me a line</a>
+  <header class="top-fade" aria-hidden="true"></header>
+
+  <main class="site-shell">
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="identity-row">
+        <img class="portrait" src="DMN_8247.jpg" width="64" height="64" alt="Portrait of Eugene Lazarev">
+        <div class="identity-copy">
+          <h1 id="about-title">Eugene Lazarev</h1>
+          <p>Senior Product Designer</p>
+        </div>
+        <div class="social-links" aria-label="Social profiles">
+          <a href="https://www.linkedin.com/in/eugene-lazarev-2216a6252/" target="_blank" rel="noreferrer" aria-label="Eugene Lazarev on LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://medium.com/@eulazarev" target="_blank" rel="noreferrer" aria-label="Eugene Lazarev on Medium"><i class="bi bi-medium" aria-hidden="true"></i></a>
+          <a href="" aria-label="Eugene Lazarev on X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="intro-copy">
+        <p>I’m a Senior Product Designer with 8+ years of experience shaping accessible digital products and services. I currently work with the e-Governance Agency Moldova and previously designed mobile experiences at Crunchyroll.</p>
+        <p>I help teams turn complex services and workflows into clear, scalable, and useful product experiences.</p>
+        <a class="text-link" href="mailto:evgh.lazarev@gmail.com">Contact me <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="experience" id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Work Experience</h2>
+      <div class="experience-list">
+        <article class="experience-entry">
+          <div>
+            <h3>e-Governance Agency Moldova</h3>
+            <p>Senior Product Designer &amp; UX Consultant</p>
+          </div>
+          <p class="experience-entry__date">Aug 2024–Present</p>
+        </article>
+        <article class="experience-entry">
+          <div>
+            <h3>Realoc.io</h3>
+            <p>Senior Product Designer</p>
+          </div>
+          <p class="experience-entry__date">Oct 2023–Sep 2024</p>
+        </article>
+        <article class="experience-entry">
+          <div>
+            <h3>Crunchyroll</h3>
+            <p>Product Designer → Senior Product Designer</p>
+          </div>
+          <p class="experience-entry__date">Feb 2020–Feb 2023</p>
+        </article>
+        <article class="experience-entry">
+          <div>
+            <h3>Nextdesk Pty Ltd</h3>
+            <p>Product Designer</p>
+          </div>
+          <p class="experience-entry__date">Apr 2019–Feb 2020</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="selected-work" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <h2 id="work-title">Selected Work</h2>
+        <p>Illustrative product-design studies.</p>
+      </div>
+      <div class="work-list">
+        <figure class="work-card">
+          <button class="work-card__button" type="button" data-lightbox-src="assets/work-example-01.webp" data-lightbox-caption="Mobile Product Experience — illustrative concept">
+            <span class="work-card__frame"><img src="assets/work-example-01.webp" alt="Illustrative mobile product interface concept" width="1600" height="960" loading="lazy"></span>
+            <figcaption><span>Mobile Product Experience</span><span>Illustrative concept</span></figcaption>
+          </button>
+        </figure>
+        <figure class="work-card">
+          <button class="work-card__button" type="button" data-lightbox-src="assets/work-example-02.webp" data-lightbox-caption="Design System Foundations — illustrative concept">
+            <span class="work-card__frame"><img src="assets/work-example-02.webp" alt="Illustrative design system components and foundations" width="1600" height="960" loading="lazy"></span>
+            <figcaption><span>Design System Foundations</span><span>Illustrative concept</span></figcaption>
+          </button>
+        </figure>
+        <figure class="work-card">
+          <button class="work-card__button" type="button" data-lightbox-src="assets/work-example-03.webp" data-lightbox-caption="Web Platform Concept — illustrative concept">
+            <span class="work-card__frame"><img src="assets/work-example-03.webp" alt="Illustrative responsive web platform dashboard" width="1600" height="960" loading="lazy"></span>
+            <figcaption><span>Web Platform Concept</span><span>Illustrative concept</span></figcaption>
+          </button>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p>© 2026 Eugene Lazarev</p></footer>
+
+  <nav class="floating-nav" aria-label="Primary">
+    <a class="floating-nav__link is-active" href="#about" aria-current="page">About</a>
+    <a class="floating-nav__link" href="#work">Work</a>
+  </nav>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" data-lightbox hidden>
+    <div class="lightbox__panel">
+      <h2 class="visually-hidden" id="lightbox-title">Selected work image preview</h2>
+      <button class="lightbox__close" type="button" aria-label="Close image preview" data-lightbox-close><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+      <figure>
+        <img src="" alt="" data-lightbox-image>
+        <figcaption data-lightbox-caption></figcaption>
+      </figure>
     </div>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const elements = document.querySelectorAll('.container > *');
-      elements.forEach((el, index) => {
-        setTimeout(() => {
-          el.classList.add('visible');
-        }, index * 300);
-      });
-    });
-  </script>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
