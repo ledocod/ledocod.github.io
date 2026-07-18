@@ -125,12 +125,33 @@ h3 { font-size: 14px; line-height: 1.45; }
 
 .intro-copy p:last-of-type { color: var(--muted); }
 
-.text-link {
+.contact-button {
+  display: inline-flex;
   width: fit-content;
-  color: var(--ink);
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: #ffffff;
   font-weight: 500;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+  text-decoration: none;
+  transition: background-color .2s ease, transform .2s ease;
+}
+
+.contact-button:hover {
+  background: #303030;
+  color: #ffffff;
+}
+
+.contact-button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.contact-button:active {
+  transform: translateY(1px);
 }
 
 .experience { padding-bottom: 112px; }
