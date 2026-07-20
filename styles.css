@@ -176,7 +176,7 @@ h3 { font-size: 14px; line-height: 1.45; }
   text-align: right;
 }
 
-.selected-work { padding-bottom: 112px; }
+.selected-work { padding-bottom: 32px; }
 
 .section-heading {
   display: flex;
@@ -215,6 +215,7 @@ h3 { font-size: 14px; line-height: 1.45; }
   padding: 0 0 120px;
   color: var(--muted);
   font-size: 13px;
+  text-align: center;
 }
 
 .floating-nav {
@@ -289,7 +290,7 @@ h3 { font-size: 14px; line-height: 1.45; }
 
   .experience-entry__date { text-align: left; }
 
-  .selected-work { padding-bottom: 88px; }
+  .selected-work { padding-bottom: 32px; }
 
   .section-heading { display: grid; gap: 4px; }
 
